@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ud:
+    image: nginx:alpine
+    volumes:
+      - ./src:/usr/share/nginx/html
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=ud"
+      - "traefik.docker.network=web"
+      - "traefik.frontend.rule=Host:ud.naueramant.com"
+      - "traefik.port=80"
+
+networks:
+  web:
+    external: true

@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Document</title>
 </head>
 <body>
+    <div class="barcodeWrap">
+        <div id="barcodeTarget"></div>
+        <input type="text" id="value" onkeydown="codeUpdate()"></div>
+    </div>
+
+    <div class="buttons">
+        <button id="toggle" onclick="toggle()">Auto Random</button>
+        <button onclick="first()">First</button>
+        <button onclick="last()">Last</button>
+        <button onclick="generate()">Random</button>
+    </div>
     
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>  
+    <script type="text/javascript" src="jquery-barcode.min.js"></script>  
+
     <script src="main.js"></script>
 </body>
 </html>
