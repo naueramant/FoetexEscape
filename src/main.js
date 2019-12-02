@@ -34,7 +34,7 @@ function getDate() {
 
     var y = date.getFullYear().toString().slice(2, 4);
     var m = pad(date.getMonth() + 1, 2)
-    var d = pad(date.getDay(), 2)
+    var d = pad(date.getDate(), 2)
 
     return y + m + d
 }
